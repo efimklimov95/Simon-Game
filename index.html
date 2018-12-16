@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Simon Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='https://fonts.googleapis.com/css?family=Original+Surfer&effect=emboss' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css">
+
+  <audio id="clip1">
+  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></source>
+  </audio>
+  <audio id="clip2">
+  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></source>
+  </audio>
+  <audio id="clip3">
+  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></source>
+  </audio>
+  <audio id="clip4">
+  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></source>
+  </audio>
+</head>
+
+<body>
+
+  <div id="outer-circle">
+    <div id="topleft"></div>
+    <div id="topright"></div>
+    <div id="bottomleft"></div>
+    <div id="bottomright"></div>
+    <div id="inner-circle">
+      <div id="title" class="font-effect-emboss">SIMON!</div>
+      <div id="switches">
+        <!-- <input type="checkbox" class="toggle" id="on"> -->
+        <button class="toggle" id="on">-</button>
+        <button class="button" id="start">Start</button>
+        <button class="toggle" id="strict">-</button>
+        <!-- <input type="checkbox" class="toggle" id="strict"> -->
+      </div>
+      <div class="text1">
+        <span>POWER</span><span>STRICT</span>
+      </div>
+      <div id="turn"></div>
+      <div class="text2">
+        COUNT
+      </div>
+    </div>
+  </div>
+  
+  <div id="rules-btn-outer">
+    <button id="rules-button" class="button">RULES</button>
+  </div>
+
+  <div class="rules-outer" style="display:none">
+    <div class="rules-inner">
+      <ol>
+        <li>Click "POWER" button to power the game ON or OFF.</li>
+        <li>Click "Start" button to start a new game.</li>
+        <li>The game will flash colors in a particular order. Your goal is to memorize that order and repeat it by clicking those color buttons after the game stops flashing them. It starts with 1 color in first round and adds 1 per round. If you click wrong color the round restarts.</li>
+        <li>If you click "STRICT" button a strict mode will turn on which means if you fail a round the game starts from the very beginning.</li>
+        <li>To win you need to go through 20 rounds.</li>
+      </ol>
+    </div>
+  </div>
+
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.js"
+    integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+    crossorigin="anonymous"></script>
+  <script  src="js/main.js"></script>
+
+</body>
+</html>
